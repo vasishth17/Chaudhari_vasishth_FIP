@@ -1,0 +1,615 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/*Remove this rule on your HTML elements as you start to fill them with content*/
+
+.box-color {
+	color: #fff;
+	background: #f3f3f3;
+	text-align: center;
+	margin: 0;
+}
+
+/*basic reset*/
+
+/*browsers have built in values for elements so we'll reset a few things to zero, you can add to this or remove items as needed*/
+
+div,p,body,header,footer,section,article,nav ,h1,h2,h3,h4,h5{ 
+	margin: 0; 
+	padding: 0; 
+	color: black;
+}	
+
+img { 
+	border: none; /*Remove border if image is a link*/
+	margin: 0; 
+	padding: 0; 
+}
+
+/*html selectors*/
+
+body {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 12px;
+	color: #000;
+}
+
+/* Remove underlines from links */
+
+a {
+	text-decoration: none;
+}
+
+/*hide elements from browser but show for doc outline*/
+
+.hidden {
+	display: none;
+}
+
+
+/*Common page elements  */
+
+/*This is essentially a box that we place the whole site in.  
+We center the box using margin 0 auto and give it a fixed width of 1920px.
+1920px would fit a large monitor or tv. Sizes will vary depending on the projects
+you work on and the intended audience */
+
+#container {
+	margin: 0 auto;
+	width: 1920px;
+	background-color: #ffffff;
+	color: black;
+}
+
+/* this is our grid based off of our XD file */
+.grid-con {
+	display: grid;
+	grid-template-columns: repeat(12, 122px);
+	grid-column-gap: 16px;
+	padding-left: 140px;
+	padding-right: 140px;
+}
+
+#header-con {
+	background-color: #000000;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+#logo {
+	grid-column: 1/3;
+	/* Remove as content will dictate height */
+	/* height: 80px; */
+	   justify-content: center;
+    display: flex;
+	background-color: #000;
+}
+#logo h1{
+	align-self: center;
+	color: rgb(255, 255, 255);
+}
+
+#main-nav {
+	grid-column: 3/11;
+	/* Remove as content will dictate height */
+	/* height: 80px; */
+ display: flex;
+align-items: center;
+justify-content: space-around;
+padding: 0px;
+font-size: 18px;
+font-family: 'Ubuntu', sans-serif;
+background-color: #000;
+}
+#main-nav ul{
+
+list-style: none;
+}
+#main-nav ul li{
+list-style: none;
+display: inline-block;
+}
+#main-nav ul li a{
+list-style: none;
+color: rgb(255, 255, 255);
+text-decoration: none;
+padding: 3px 20px;
+}
+#main-nav ul li a:hover{
+	border-bottom: 3px solid rgb(255, 0, 0);
+	padding-bottom: 6px;
+	transition: all 0.25s ease-in-out;
+}
+
+#header-box2 {
+	grid-column: 11/-1;
+	/* Remove as content will dictate height */
+	/* height: 80px; */
+
+align-items: center;
+display: flex;
+justify-content: center;
+background-color: #000;}
+
+#header-box2 input{
+border-radius: 15px 0 0 15px;
+text-align: center;}
+#header-box2 button{
+border-radius: 0 15px 15px 0;
+border: none;
+}
+
+/* Specific to index page desktop  */
+
+#hero {
+	margin-top: 100px;
+}
+
+#hero-text {
+	grid-column: 1/8;
+	/* Remove as content will dictate height */
+	height: 582px;
+}
+.hero-text{
+	font-weight: 900;
+	margin-bottom: 40px;
+	margin-top: 60px;
+	font-size: 30px;
+	font-family: Arial, Helvetica, sans-serif;
+	
+}
+.hero-para {
+    padding: 0px 50px;
+    margin-bottom: 20px;
+	text-align: left;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.explore-more h3{
+		font-size: 17px;
+		background-color: black;
+		color: white;
+		padding: 8px 15px;
+		border-radius: 30px;
+		justify-content: center;
+		width: 129px;
+		margin-left: 65px;
+		margin-top: 153px;
+		font-family: Arial, Helvetica, sans-serif;
+}
+.explore-more h3:hover{
+	color: #000;
+	background-color: #ffffff;
+	transition: background-color 0.5s ease-in-out;
+	box-shadow: 2px 3px 13px 5px rgba(0, 0, 0, 0.5);
+	box-shadow: 1px 5px 22px 0.5px rgba(0, 0, 0, 0.3);
+}
+
+
+#hero-image {
+	grid-column: 8/-1;
+	/* Remove as content will dictate height */
+	height: 582px;
+}
+
+#products {
+	margin-top: 75px;
+	margin-bottom: 100px;
+}
+#products h3{
+	text-align: center;
+    border-top: 0.1px solid rgba(0, 0, 0,0.5);
+    padding-top: 34px;
+    margin-top: 6px;
+}
+#products button{
+	text-align: center;
+}
+
+#products h2 {
+	grid-column: 1/-1;
+	text-align: center;
+	margin-bottom: 40px;
+	font-size: 22px;
+	font-family: 'Montserrat', sans-serif;;
+}
+
+#product1 {
+	grid-column: 1/5;
+	cursor: pointer;
+}
+.shop-btn{
+	color: #000;
+	background-color: rgb(255, 255, 255);
+	text-align: center;
+    width: 102px;
+    border: none;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+    border-radius: 23px;
+    margin-top: 40px;
+	padding: 10px 18px;
+    margin-left: 208px;
+}
+.shop-btn:hover{
+	background-color: rgb(216, 216, 216);
+}
+
+#product2 {
+	grid-column: 5/9;
+	
+	cursor: pointer;
+}
+
+
+#product3 {
+	grid-column: 9/-1;
+
+	cursor: pointer;
+}
+
+.product-box {
+	background-color: #ddd;
+	height: 461px;
+}
+.product-box:hover{
+	box-shadow: 3px -2px 9px -2px rgba(0, 0, 0, 0.4);
+}
+.product-box p{
+	padding: 10px 46px;
+}
+
+#about-con {
+	background-color: #ddd;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+#about-title {
+	text-align: center;
+	margin-bottom: 40px;
+	font-size: 22px;
+	font-family: 'Montserrat', sans-serif;
+}
+
+#about-text {
+	grid-column: 1/8;
+	/* Remove as content will dictate height */
+	
+	    padding-top: 50px;
+}
+#about-text p{
+    padding: 17px 95px;
+    padding-bottom: 37px;
+/* font-family: 'Roboto', sans-serif; */
+}
+
+#about-image {
+	grid-column: 8/-1;
+	/* Remove as content will dictate height */
+	height: 700px;
+}
+#about-text button{
+	background-color: #000000;
+       padding: 7px 0px;
+    border: none;
+    border-radius: 24px;
+    position: relative;
+    float: left;
+    left: 104px;
+    margin-top: 120px;
+}
+#about-text button a{
+	color: #ffffff;
+	padding: 6px 31px
+}
+#about-text button a:hover{
+	color: rgb(0, 0, 0);
+}
+#about-text button:hover{
+	color: #000;
+	background-color: #ffffff;
+	transition: background-color 0.5s ease-in-out;
+	box-shadow: 2px 3px 13px 5px rgba(0, 0, 0, 0.5);
+	box-shadow: 1px 5px 22px 0.5px rgba(0, 0, 0, 0.3);
+}
+#contact {
+	margin-top: 100px;
+	/* margin-bottom: 100px; */
+}
+#contact h2{
+	    text-align: center;
+    grid-column: 1/-1;
+    margin-bottom: 40px;
+    font-size: 22px;
+	font-family: 'Montserrat', sans-serif;
+}
+
+#contact-text {
+	grid-column: 1/8;
+	/* Remove as content will dictate height */
+
+	padding-top: 35px;
+	    margin-bottom: 100px;
+		padding-bottom: 30px;
+}
+#contact-text h3{
+	text-align: center;
+	margin-top: 35px;
+	font-size: large;
+}
+#contact-text p{
+	   padding: 8px 50px;
+}
+.business-hrs, .con-info, .social-media, .direction, .faq{
+	padding-bottom: 24px;
+}
+
+
+#contact-form {
+	grid-column: 8/-1;
+	/* Remove as content will dictate height */
+	    margin-bottom: 100px;
+}
+#contact-form label{
+	color: #000;
+	display: block;
+	margin-bottom: 15px;
+	font-weight: bold;
+	margin-top: 33px;
+    text-align: left;
+    left: 24px;
+    position: relative;
+}
+#contact-form input, textarea{
+	  
+    padding: 10px;
+    font-size: 16px;
+    border: 0px;
+    border-radius: 22px;
+    width: 89%;
+    display: inline-block;
+}
+#contact-form input, textarea::placeholder{
+text-align: center;
+border: none;
+}
+#contact-form textarea{
+height: 75px;
+border-radius: 14px;}
+#contact-form button{
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 25px;
+}
+#contact-form button:hover{
+	background-color: #3e8e41;
+}
+
+/*Common page elements  */
+
+#footer-con {
+	background-color: #000000;
+	padding-top: 50px;
+	padding-bottom: 20px;
+}
+
+#footer-logo {
+	display: flex;
+    grid-column: 1/3;
+    height: 80px;
+    background-color: #000;
+    align-items: center;
+    justify-content: center;
+}
+#footer-logo h1{
+	color: white;
+}
+
+#footer-nav {
+	grid-column: 3/-1;
+	/* Remove as content will dictate height */
+	height: 80px;
+	margin-bottom: 100px;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	padding: 0px;
+	font-size: 18px;
+	font-family: 'Ubuntu', sans-serif;
+	background-color: #000;
+}
+#footer-nav ul{
+	
+    margin-left: -295px;
+}
+#footer-nav ul li{
+	display: inline-block;
+}
+#footer-nav ul li a{
+	    padding: 9px 56px;
+		color: #ffffff;
+}
+#footer-nav ul li a:hover{
+	color: rgb(206, 206, 206);
+}
+
+
+#footer-newsletter1 {
+	grid-column: 1/3;
+	/* Remove as content will dictate height */
+	height: 80px;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+	background-color: black;
+}
+#footer-newsletter1 h3{
+	color: white;
+    border-right: 1px solid white;
+    padding-right: 16px;
+}
+#footer-newsletter2 {
+	grid-column:4/5;
+    height: 80px;
+    align-items: center;
+    display: flex;
+   
+    background-color: black;
+    margin-left: -211px;
+  
+    padding-left: 23px;
+}
+
+#footer-newsletter2 input{
+	background-color: black;
+    border: 2px solid rgb(179, 179, 179);
+    text-align:center;
+    border-radius: 1px;
+	padding: 3px 3px;
+}
+#footer-newsletter2 input:hover{
+	border-color: white;
+}
+#footer-newsletter2 button{
+border: none;
+border-radius: 10px;
+border-radius: 1px;
+background-color: black;
+color: white;
+border: 2px solid rgb(179, 179, 179);
+cursor: pointer;
+padding: 2px 11px;
+}
+#footer-newsletter2 button:hover{
+	border-color: rgb(255, 255, 255);
+}
+#footer-social {
+	grid-column: 11/-1;
+	/* Remove as content will dictate height */
+	height: 80px;
+	background-color: #000;
+	    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+#footer-social p{
+	color: white;
+	
+}
+
+
+
+/* gallery page */
+
+#gallery-hero-con {
+	background-color: #aaaaaa;
+	background: url("../images/gallery/main_img.jpg");
+	height: 580px;
+    background-color: rgba(0,0 , 0, 0.4);
+    background-blend-mode: overlay;
+
+	
+}
+
+#gallery-text {
+	grid-column: 1/9;
+	/* Remove as content will dictate height */
+	height: 200px;
+	margin-top: 100px;
+
+}
+#gallery-text h1{
+	color: white;
+}
+
+
+#gallery-controls {
+	margin-top: 200px;
+	grid-column: 6/8;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.collection-btn{
+	    margin-top: 221px;
+    margin-left: 35px;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 9px;
+    padding: 8px 0px;
+}
+.collection-btn a{
+	color: rgb(0, 0, 0);
+	padding: 9px 30px;
+}
+.collection-btn a:hover{
+	color: white;
+}
+.collection-btn:hover{
+	background-color: rgb(255, 0, 0);
+}
+.dot {
+	background-color: #dddddd;
+	height: 30px;
+	width: 30px;
+	border-radius: 50%;
+	margin: 5px;
+  }
+
+#gallery h2 {
+	grid-column: 1/-1;
+	text-align: center;
+	grid-column: 1/-1;
+    text-align: center;
+    margin: 70px;
+    border-bottom: 2px solid black;
+    padding-bottom: 10px;
+  }
+
+.gallery-box {
+	background-color: #ddd;
+	grid-column: span 4 / span 4;
+	/* Remove as content will dictate height */
+	height: 430px;
+	margin-bottom: 20px;
+	
+	
+}
+.gallery-box:hover{
+
+	box-shadow: 3px -2px 9px -2px rgba(0, 0, 0, 0.4);
+}
+.gallery-box img:hover{
+	 
+	transform: scale(1.0);
+	box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+}
+.shoe-info{
+	padding-left: 15px;
+    padding-top: 15px;
+}
+.shoe-info p{
+	padding: 5px;
+}
+.shoe-name{
+	color: black;
+	font-size: 16px;
+}
+.category{
+	color: #757575;
+}
+.shoe-colors{
+	color: #757575;
+}
+.shoe-price{
+	font-size: 16px;
+	margin-top: 10px;
+}
